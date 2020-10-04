@@ -5,7 +5,7 @@ export function findPairs(nums: number[], k: number): number {
   numMap.forEach((value, key) => {
     if (k === 0 && value > 1) {
       numPairs++;
-    } else if(k !== 0) {
+    } else if (k !== 0) {
       if (numMap.has(k + key)) {
         numPairs++;
       }
