@@ -10,6 +10,15 @@
   "engines": {
     "node": ">=10"
   },
+  "prettier": {
+    "printWidth": 80,
+    "tabWidth": 2,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "bracketSpacing": true,
+    "semi": true,
+    "useTabs": false
+  },
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
@@ -41,6 +50,8 @@
   "devDependencies": {
     "@size-limit/preset-small-lib": "^4.6.0",
     "@types/jest": "^26.0.14",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-prettier": "^3.1.4",
     "husky": "^4.3.0",
     "size-limit": "^4.6.0",
     "tsdx": "^0.14.0",

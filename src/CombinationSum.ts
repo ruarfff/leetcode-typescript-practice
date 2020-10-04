@@ -6,7 +6,6 @@ export function combinationSum(
   candidates.sort(function(a, b) {
     return a - b;
   });
-  console.log('Candidates: ' + JSON.stringify(candidates));
   getCombos(output, candidates, target, 0, []);
   return output;
 }
@@ -19,7 +18,6 @@ function getCombos(
   currentCombo: number[]
 ) {
   if (target === 0) {
-    console.log('Adding currentCombo: ' + JSON.stringify(currentCombo));
     output.push([...currentCombo]);
     return;
   }
