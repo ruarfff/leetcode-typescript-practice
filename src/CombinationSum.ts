@@ -3,32 +3,34 @@ export function combinationSum(
   target: number
 ): number[][] {
   const output: number[][] = [];
-  const c = candidates.sort()
-  console.log('Adding currentCombo: ' + JSON.stringify(c))
-  getCombos(output, c, target, 0, []);
+  candidates.sort(function(a, b) {
+    return a - b;
+  });
+  console.log('Candidates: ' + JSON.stringify(candidates));
+  getCombos(output, candidates, target, 0, []);
   return output;
 }
 
-function getCombos(output: number[][], candidates: number[],target: number, index: number, currentCombo: number[]) {
-    console.log('target: ' + target)
-    console.log('currentCombo: ' + JSON.stringify(currentCombo))
-    if(target === 0) {
-        console.log('Adding currentCombo: ' + JSON.stringify(currentCombo))
-        output.push([...currentCombo]);
-        return;
+function getCombos(
+  output: number[][],
+  candidates: number[],
+  target: number,
+  index: number,
+  currentCombo: number[]
+) {
+  if (target === 0) {
+    console.log('Adding currentCombo: ' + JSON.stringify(currentCombo));
+    output.push([...currentCombo]);
+    return;
+  }
+
+  for (let i = index; i < candidates.length; i++) {
+    const current = candidates[i];
+    if (current > target) {
+      break;
     }
-
-    console.log('index: ' + index)
-    console.log('len: ' + candidates.length)
-    for(let i = index; i < candidates.length; i++) {
-        const current = candidates[i];
-        if(current > target) {
-            break;
-        }
-        currentCombo.push(current)
-        getCombos(output, candidates, target - current, i, currentCombo);
-        currentCombo.pop()
-    }
-
-
+    currentCombo.push(current);
+    getCombos(output, candidates, target - current, i, currentCombo);
+    currentCombo.pop();
+  }
 }
