@@ -1,4 +1,4 @@
-import { search } from '../src/BinarySearch';
+import { search, searchR } from '../src/BinarySearch';
 
 describe('BinarySearch', () => {
   it('Example 1', () => {
@@ -7,6 +7,7 @@ describe('BinarySearch', () => {
     const output = 4;
 
     expect(search(input, target)).toEqual(output);
+    expect(searchR(input, target)).toEqual(output);
   });
 
   it('Example 2', () => {
@@ -15,6 +16,7 @@ describe('BinarySearch', () => {
     const output = -1;
 
     expect(search(input, target)).toEqual(output);
+    expect(searchR(input, target)).toEqual(output);
   });
 
   it('Example 3', () => {
@@ -23,6 +25,7 @@ describe('BinarySearch', () => {
     const output = -1;
 
     expect(search(input, target)).toEqual(output);
+    expect(searchR(input, target)).toEqual(output);
   });
 
   it('Example 4', () => {
@@ -31,6 +34,7 @@ describe('BinarySearch', () => {
     const output = 0;
 
     expect(search(input, target)).toEqual(output);
+    expect(searchR(input, target)).toEqual(output);
   });
 
   it('Example 5', () => {
@@ -39,6 +43,7 @@ describe('BinarySearch', () => {
     const output = -1;
 
     expect(search(input, target)).toEqual(output);
+    expect(searchR(input, target)).toEqual(output);
   });
 
   it('Example 6', () => {
@@ -47,6 +52,7 @@ describe('BinarySearch', () => {
     const output = 0;
 
     expect(search(input, target)).toEqual(output);
+    expect(searchR(input, target)).toEqual(output);
   });
 
   it('Example 7', () => {
@@ -55,6 +61,7 @@ describe('BinarySearch', () => {
     const output = 2;
 
     expect(search(input, target)).toEqual(output);
+    expect(searchR(input, target)).toEqual(output);
   });
 
   it('Example 8', () => {
@@ -63,6 +70,7 @@ describe('BinarySearch', () => {
     const output = 5;
 
     expect(search(input, target)).toEqual(output);
+    expect(searchR(input, target)).toEqual(output);
   });
 
   it('Example 9', () => {
@@ -1072,5 +1080,6 @@ describe('BinarySearch', () => {
     const output = 994;
 
     expect(search(input, target)).toEqual(output);
+    expect(searchR(input, target)).toEqual(output);
   });
 });
