@@ -1,6 +1,6 @@
 import { findMinArrowShots } from '../src/MinimumNumberofArrowstoBurstBalloons';
 
-describe('MinimumNumberofArrowstoBurstBalloons', () => {
+describe('MinimumNumberOfArrowsToBurstBalloons', () => {
   it('Example 1', () => {
     const points = [
       [10, 16],
