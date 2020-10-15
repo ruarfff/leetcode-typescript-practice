@@ -19,4 +19,11 @@ describe('HouseRobberII', () => {
 
     expect(rob(nums)).toEqual(output);
   });
+
+  it('Example 4', () => {
+    const nums = [1, 2, 1, 1];
+    const output = 3;
+
+    expect(rob(nums)).toEqual(output);
+  });
 });
